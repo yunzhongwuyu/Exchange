@@ -1,7 +1,7 @@
 Function Get-O365Credential()
 {
           #Write-Output "Enter Connect-O365"
-          #Read-Host -prompt "Enter Password" -assecurestring | convertfrom-securestring |out-file D:\jucq\O365PASS.txt -Force
+          #Read-Host -prompt "Enter Password" -assecurestring | convertfrom-securestring |out-file D:\O365PASS.txt -Force
           $pass = cat "D:\O365PASS.txt" | Convertto-securestring
           return new-object -typename System.Management.Automation.PSCredential -argumentlist "adminuser@domain.com", $pass
 }
