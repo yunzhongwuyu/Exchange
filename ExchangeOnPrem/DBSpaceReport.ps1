@@ -1,0 +1,3 @@
+$dbs = $(. "DatabaseFreeSpaceReport.ps1" Database001* -OutputToConsole)[1..9999]
+
+$dbs|select Name, "DatabaseSize (GB)", "AvailableNewMailboxSpace (GB)", @{Name="Effective DatabaseSize (GB)"; Expression={$_."DatabaseSize (GB)"-$_."AvailableNewMailboxSpace (GB)"}}, "Combined free space for mailbox data (GB)" | sort "Combined free space for mailbox data (GB)" -Desc | ft -auto |Out-File D:\scripts\DBSpaceReport.txt
