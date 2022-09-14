@@ -1,11 +1,3 @@
-# Script:	Get-MeetingRoomStats_EWS.ps1
-# Purpose:	Gather statistics regarding meeting room usage
-# Author:	Nuno Mota
-# E-mail:   nuno.filipe.mota@gmail.com
-# Date:		May 2017
-# Version:	0.1
-
-
 
 <#
 .SYNOPSIS
