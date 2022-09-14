@@ -24,7 +24,7 @@
 }
 
 
-$Logs = New-Item -Type file -Path D:\jucq -Name GroupEditLog.txt -Force
+$Logs = New-Item -Type file -Path D:\Directory -Name GroupEditLog.txt -Force
 
 $Groups  = Get-DistributionGroup  -Filter {ManagedBy -ne $null} -ResultSize unlimited
 
